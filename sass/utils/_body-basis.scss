@@ -1,14 +1,21 @@
 .container {
-  margin-right: auto;
   margin-left: auto;
-  width: 1200px;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  width: 100%;
+
+  outline: 1px solid red;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 body {
@@ -24,3 +31,30 @@ body {
   font-weight: 500;
   font-size: 14px;
 }
+
+// .container {
+//   margin-right: auto;
+//   margin-left: auto;
+//   width: 1200px;
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }
+
+// .section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+
+// body {
+//   background-color: var(--main-bg-color);
+//   color: var(--primary-text-color);
+//   font-family: Roboto, sans-serif;
+//   font-size: 14px;
+//   letter-spacing: 0.03em;
+// }
+
+// .title {
+//   color: var(--primary-title-color);
+//   font-weight: 500;
+//   font-size: 14px;
+// }
