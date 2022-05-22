@@ -1,0 +1,31 @@
+// fonts
+@import "./utils/fonts";
+// modern normalize
+@import "./utils/modern-normalize.min";
+
+// styles
+@import "./utils/vars";
+@import "./utils/body-basis";
+@import "./utils/reset";
+@import "./utils/vis-hid";
+
+// header
+@import "./components/logo";
+@import "./components/page-header";
+
+// main page
+@import "./components/main-page/banner-section";
+@import "./components/main-page/benefits-section";
+@import "./components/main-page/what-we-doing-secton";
+@import "./components/main-page/team-section";
+@import "./components/main-page/our-clients-section";
+
+// footer
+@import "./components/page-footer";
+
+// modal window
+@import "./components/main-page/modal-window";
+
+// portfolio page
+@import "./components/portfolio-page/projects";
+@import "./components/portfolio-page/project-filters";
