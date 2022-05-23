@@ -14,19 +14,16 @@
 
 .our-clients__list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin-top: -15px;
-  margin-bottom: -15px;
+  margin: -15px;
 }
 
 .our-clients__logo {
-  width: calc((100% - 30px) / 2);
-  margin-top: 15px;
-  margin-bottom: 15px;
+  width: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
 
-  &:nth-child(2n) {
-    margin-left: 30px;
+  @media screen and (min-width: 769px) {
+    width: calc((100% - 6 * 15px) / 3);
   }
 }
 

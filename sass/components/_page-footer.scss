@@ -9,8 +9,21 @@
   padding-bottom: 60px;
 }
 
+.footer__menu {
+  @media screen and (min-width: 769px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
 .logo-address {
   margin-bottom: 60px;
+
+  @media screen and (min-width: 769px) {
+    width: 50%;
+  }
 }
 
 .address {
@@ -51,10 +64,20 @@
 .footer__soc-media {
   text-transform: uppercase;
   margin-bottom: 60px;
+
+  @media screen and (min-width: 769px) {
+    width: 50%;
+  }
 }
 
 .soc-media__list {
   margin-top: 20px;
+}
+
+.form-join-box {
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+  }
 }
 
 .form-join__text {
