@@ -17,8 +17,8 @@
   border-radius: 4px;
   padding: 40px;
 
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   top: 50%;
   left: 50%;
   position: relative;
@@ -75,10 +75,21 @@
   color: var(--primary-title-color);
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
 
   margin-bottom: 12px;
+}
+
+.modal__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
 }
 
 .modal__input {
@@ -118,11 +129,11 @@
     fill: var(--accent-color);
   }
 
-  .modal__input:hover & {
+  .modal__input:hover + & {
     fill: var(--accent-color);
   }
 
-  .modal__input:focus & {
+  .modal__input:focus + & {
     fill: var(--accent-color);
   }
 }
@@ -135,28 +146,19 @@
   overflow: auto;
 
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
+    font-size: 14px;
+    line-height: 1.142;
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
   }
 }
 
-.modal__label {
-  display: block;
-  margin-bottom: 4px;
-
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-
-  color: #757575;
-}
-
 .policy__link {
   color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  white-space: nowrap;
 
   &:hover,
   &:focus {
@@ -165,17 +167,14 @@
 }
 
 .policy__box {
-  display: flex;
-  justify-content: center;
-
   margin-bottom: 30px;
 }
 
 .policy__label {
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.166;
 
   display: flex;
-  align-items: center;
 }
 
 .policy__label span {
@@ -197,6 +196,10 @@
   &:focus {
     border-color: var(--accent-color);
   }
+}
+
+.policy__text {
+  white-space: nowrap;
 }
 
 .policy__icon-check {
