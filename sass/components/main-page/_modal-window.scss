@@ -24,7 +24,7 @@
   border-radius: 4px;
   padding: 40px;
 
-  width: 450px;
+  max-width: 450px;
   min-height: 609px;
   position: relative;
 
@@ -219,7 +219,7 @@
   border: 2px solid var(--modal-icon-fill-color);
   border-radius: 2px;
 
-  margin-right: 8.38px;
+  margin-right: 8px;
 
   display: flex;
   justify-content: center;
@@ -254,4 +254,8 @@
 .modal__btn {
   padding-right: 55px;
   padding-left: 55px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

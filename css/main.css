@@ -629,13 +629,6 @@ ul {
   background-color: var(--header-bg-color);
 }
 
-@media screen and (max-width: 768px) {
-  .header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
 .header .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -674,7 +667,7 @@ ul {
 }
 
 .nav__link {
-  color: var(--primary-header-color);
+  color: var(--primary-title-color);
   font-weight: 500;
   letter-spacing: 0.02em;
   display: inline-block;
@@ -739,7 +732,7 @@ ul {
 }
 
 .contacts__link {
-  color: var(--secondary-header-color);
+  color: var(--primary-text-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
@@ -776,6 +769,31 @@ ul {
   }
 }
 
+.mob-menu__open-button,
+.mob-menu__close-button {
+  border: none;
+  background-color: transparent;
+  min-height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .mob-menu__open-button,
+  .mob-menu__close-button {
+    display: none;
+  }
+}
+
+.mob-menu__close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 15px;
+}
+
 .menu-icon-mob {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -785,10 +803,115 @@ ul {
   fill: var(--accent-color);
 }
 
+.mob__menu {
+  background-color: var(--header-bg-color);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
 @media screen and (min-width: 769px) {
-  .menu-icon-mob {
+  .mob__menu {
     display: none;
   }
+}
+
+.mob__menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 100vh;
+  padding: 48px 40px;
+}
+
+.mob__nav {
+  margin-bottom: auto;
+}
+
+.mob-nav__item:nth-child(n + 2) {
+  margin-top: 32px;
+}
+
+.mob-nav__link {
+  color: var(--primary-title-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-nav__link--current {
+  color: var(--accent-color);
+}
+
+.mob-nav__link:hover, .mob-nav__link:focus {
+  color: var(--accent-color);
+}
+
+.mob__contacts {
+  margin-bottom: 64px;
+}
+
+.mob-contacts__item:nth-child(n + 2) {
+  margin-top: 32px;
+}
+
+.mob-contacts__link-tel {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+}
+
+.mob-contacts__link-mail {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.02em;
+}
+
+.mob__soc-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mob-soc-media__item:nth-child(-n + 3) {
+  padding-right: 10px;
+}
+
+.mob-soc-media__item:nth-child(n + 2) {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 9px;
+}
+
+.mob-soc-media__link {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .banner {
@@ -1387,7 +1510,7 @@ ul {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-  width: 450px;
+  max-width: 450px;
   min-height: 609px;
   position: relative;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1626,7 +1749,7 @@ ul {
   height: 15px;
   border: 2px solid var(--modal-icon-fill-color);
   border-radius: 2px;
-  margin-right: 8.38px;
+  margin-right: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1664,6 +1787,10 @@ ul {
 .modal__btn {
   padding-right: 55px;
   padding-left: 55px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .projects {
