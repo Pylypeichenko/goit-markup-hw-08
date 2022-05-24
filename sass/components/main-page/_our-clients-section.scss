@@ -10,6 +10,13 @@
   line-height: 1.178;
 
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.166;
+
+    margin-bottom: 50px;
+  }
 }
 
 .our-clients__list {
@@ -24,6 +31,9 @@
 
   @media screen and (min-width: 769px) {
     width: calc((100% - 6 * 15px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 12 * 15px) / 6);
   }
 }
 
