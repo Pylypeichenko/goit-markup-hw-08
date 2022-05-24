@@ -74,11 +74,21 @@
   @media screen and (max-width: 768px) {
     display: none;
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contacts__item {
   &:nth-child(n + 2) {
-    margin-top: 8px;
+    @media screen and (max-width: 1199px) {
+      margin-top: 8px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
   }
 }
 
@@ -95,11 +105,21 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contacts__icon-mail,
 .contacts__icon-smartphone {
   fill: currentColor;
+  margin-right: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
 }
 
 .menu-icon-mob {
